@@ -7,6 +7,7 @@
 // @homepage     https://github.com/SayfullahSayeb/Distraction-Free-YouTube
 // @match        *://*.youtube.com/*
 // @match        *://*.youtube-nocookie.com/*
+// @icon         https://www.google.com/s2/favicons?domain=www.youtube.com&sz=32
 // @grant        GM_addStyle
 // @run-at       document-end
 // @license      MIT
