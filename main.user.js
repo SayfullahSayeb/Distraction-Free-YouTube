@@ -4,6 +4,7 @@
 // @version      1.4
 // @description  Hide sidebar, comments, and reels. Enable miniplayer and 5-video grid layout.
 // @author       Sayeb
+// @homepage     https://github.com/SayfullahSayeb/Distraction-Free-YouTube
 // @match        *://*.youtube.com/*
 // @match        *://*.youtube-nocookie.com/*
 // @grant        GM_addStyle
