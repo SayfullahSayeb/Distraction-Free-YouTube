@@ -7,7 +7,7 @@ Hide sidebar, comments, and reels. Enable miniplayer and 5-video grid layout.
 - **Hide Reels**: Removes YouTube Shorts/Reels from your feed
 - **Enable Miniplayer**: Supports picture-in-picture viewing mode
 - **5-Video Grid Layout**: Optimized grid view showing 5 videos per row
-- **Distraction-Free Interface**: Clean, focused viewing experience without clutter
+- **Hide Endscreen Elements**: Removes endscreen content, video overlays, channel overlays, cards button, and other endscreen UI overlays
 
 ## Installation
 1. Install a userscript manager:
