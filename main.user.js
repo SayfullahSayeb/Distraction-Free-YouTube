@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Distraction Free YouTube
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/SayfullahSayeb/Distraction-Free-YouTube
 // @version      1.4
 // @description  Hide sidebar, comments, and reels. Enable miniplayer and 5-video grid layout.
 // @author       Sayeb
@@ -9,11 +9,12 @@
 // @match        *://*.youtube-nocookie.com/*
 // @grant        GM_addStyle
 // @run-at       document-end
+// @license      MIT
 // ==/UserScript==
-
+ 
 (function() {
   'use strict';
-
+ 
   GM_addStyle(`
     #secondary { display: none !important; }
     grid-shelf-view-model, ytd-reel-shelf-renderer, ytd-rich-section-renderer, ytd-item-section-renderer#sections, ytd-mini-guide-entry-renderer:nth-of-type(2) { display: none !important; }
@@ -21,7 +22,7 @@
     #my-custom-ytp-btn.ytp-button { width:40px;height:40px;padding:0;}
     #my-custom-ytp-btn svg { width:24px;height:24px;display:block;}
   `);
-
+ 
   function buildSVG() {
     const ns = "http://www.w3.org/2000/svg";
     const svg = document.createElementNS(ns, "svg");
@@ -34,12 +35,12 @@
     svg.appendChild(path);
     return svg;
   }
-
+ 
   function insertButton() {
     const BUTTON_ID = 'my-custom-ytp-btn';
     const controlsRight = document.querySelector('.ytp-right-controls-right');
     if (!controlsRight || document.getElementById(BUTTON_ID)) return;
-
+ 
     const button = document.createElement('button');
     button.id = BUTTON_ID;
     button.className = 'ytp-button';
@@ -47,7 +48,7 @@
     button.style.height = '40px';
     button.title = "Miniplayer (press 'i')";
     button.appendChild(buildSVG());
-
+ 
     button.onclick = () => {
       const player = document.querySelector('.html5-video-player');
       if (player) {
@@ -59,7 +60,7 @@
         }));
       }
     };
-
+ 
     const defaultViewBtn = controlsRight.querySelector('.ytp-size-button');
     if (defaultViewBtn && defaultViewBtn.nextSibling) {
       controlsRight.insertBefore(button, defaultViewBtn.nextSibling);
@@ -67,7 +68,7 @@
       controlsRight.appendChild(button);
     }
   }
-
+ 
   setInterval(insertButton, 1000);
   window.addEventListener('yt-navigate-finish', () => setTimeout(insertButton, 300));
 })();
