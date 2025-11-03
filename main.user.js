@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Distraction Free YouTube
 // @namespace    https://github.com/SayfullahSayeb/Distraction-Free-YouTube
-// @version      1.4
+// @version      1.5
 // @description  Hide sidebar, comments, and reels. Enable miniplayer and 5-video grid layout.
 // @author       Sayeb
 // @homepage     https://github.com/SayfullahSayeb/Distraction-Free-YouTube
