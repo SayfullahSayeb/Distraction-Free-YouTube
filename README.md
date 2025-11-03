@@ -1,5 +1,14 @@
 # Distraction-Free-YouTube
 Hide sidebar, comments, and reels. Enable miniplayer and 5-video grid layout.
+
+## Features
+- **Hide Sidebar**: Removes the distracting sidebar from YouTube
+- **Hide Comments**: Eliminates comment sections for distraction-free viewing
+- **Hide Reels**: Removes YouTube Shorts/Reels from your feed
+- **Enable Miniplayer**: Supports picture-in-picture viewing mode
+- **5-Video Grid Layout**: Optimized grid view showing 5 videos per row
+- **Distraction-Free Interface**: Clean, focused viewing experience without clutter
+
 ## Installation
 1. Install a userscript manager:
    
